@@ -21,9 +21,10 @@ public class Main {
         System.out.println(weightedGraph.hasEdge("Uralsk", "Astana")); //false
         System.out.println(weightedGraph.hasEdge("Kyzylorda", "Astana")); //false
 
+        System.out.println(weightedGraph.adjacencyList("Kyzylorda"));
+        System.out.println(weightedGraph.adjacencyList("Uralsk"));
 
-
-
+        System.out.println(weightedGraph.getEdges("Astana"));
 
         /*
         WeightedGraph<String> weightedGraph = new WeightedGraph<>(true);

@@ -47,4 +47,18 @@ public class WeightedGraph<V> {
        return map.get(source).getAdjacentVertices().containsKey(map.get(destination));
    }
 
+    public List<Vertex<V>> adjacencyList(V v) {
+        if (!hasVertex(v))
+            return null;
+
+        Set<Vertex<V>> vert = map.get(v).getAdjacentVertices().keySet();
+        return new LinkedList<>(vert);
+    }
+
+    public Iterable<Map.Entry<Vertex<V>, Double>> getEdges(V v) {
+        if (!hasVertex(v))
+            return null;
+
+        return map.get(v).getAdjacentVertices().entrySet();
+    }
 }
