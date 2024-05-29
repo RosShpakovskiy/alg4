@@ -10,6 +10,22 @@ public class Main {
         from github. So I took it completely from there.
          */
 
+        //At this stage of work I don't need to have full Main class
+        //from github. I'm checking the correctness of my code.
+
+        WeightedGraph<String> weightedGraph = new WeightedGraph<>(false);
+        fillWithWeights(weightedGraph);
+
+        System.out.println(weightedGraph.hasEdge("Almaty", "Astana")); //true
+        System.out.println(weightedGraph.hasEdge("Astana", "Almaty")); //true
+        System.out.println(weightedGraph.hasEdge("Uralsk", "Astana")); //false
+        System.out.println(weightedGraph.hasEdge("Kyzylorda", "Astana")); //false
+
+
+
+
+
+        /*
         WeightedGraph<String> weightedGraph = new WeightedGraph<>(true);
         fillWithWeights(weightedGraph);
 
@@ -20,7 +36,7 @@ public class Main {
 
         System.out.println("--------------------------------");
 
-        MyGraph<String> graph = new MyGraph<>(true);
+        WeightedGraph<String> graph = new WeightedGraph<>(true);
         fillWithoutWeights(graph);
 
         System.out.println("DFS:");
@@ -32,9 +48,12 @@ public class Main {
         System.out.println("BFS:");
         Search<String> bfs = new BreadthFirstSearch<>(graph, "Almaty");
         outputPath(bfs, "Kyzylorda");
+
+         */
     }
 
-    public static void fillWithoutWeights(MyGraph<String> graph) {
+    /*
+    public static void fillWithoutWeights(WeightedGraph<String> graph) {
         graph.addEdge("Almaty", "Astana"); // 16 - 19
         graph.addEdge("Shymkent", "Atyrau");
         graph.addEdge("Atyrau", "Astana");
@@ -43,6 +62,7 @@ public class Main {
         graph.addEdge("Astana", "Kostanay");
         graph.addEdge("Shymkent", "Kyzylorda");
     }
+    */
 
     public static void fillWithWeights(WeightedGraph<String> graph) {
         graph.addEdge("Almaty", "Astana", 2.1);
@@ -53,6 +73,7 @@ public class Main {
         graph.addEdge("Astana", "Kostanay", 3.5);
         graph.addEdge("Shymkent", "Kyzylorda", 5.4);
     }
+    /*
 
     public static void outputPath(Search<String> search, String key) {
         for (String v : search.pathTo(key)) {
@@ -61,4 +82,6 @@ public class Main {
 
         System.out.println();
     }
+
+     */
 }
