@@ -5,9 +5,9 @@ import java.util.*;
 public class Dijkstra<V> extends Search<V> {
     private final Set<V> unsettledNodes;
     private final Map<V, Double> distances;
-    private final WeightedGraph<V> graph;
+    private final MyGraph<V> graph;
 
-    public Dijkstra(WeightedGraph<V> graph, V source) {
+    public Dijkstra(MyGraph<V> graph, V source) {
         super(source);
         unsettledNodes = new HashSet<>();
         distances = new HashMap<>();

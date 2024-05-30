@@ -4,12 +4,12 @@ import java.util.*;
 
 public class BFS<V> extends Search<V> {
 
-    public BFS(WeightedGraph<V> graph, V source) {
+    public BFS(MyGraph<V> graph, V source) {
         super(source);
         bfs(graph, source);
     }
 
-    private void bfs(WeightedGraph<V> graph, V current) {
+    private void bfs(MyGraph<V> graph, V current) {
         marked.add(current);
         Queue<V> queue = new LinkedList<>();
         queue.add(current);

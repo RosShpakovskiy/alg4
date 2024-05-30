@@ -2,15 +2,15 @@ package alg4;
 
 import java.util.*;
 
-public class WeightedGraph<V> {
+public class MyGraph<V> {
    private boolean directed;
    private Map<V, Vertex<V>> map = new HashMap<>();
 
-   public WeightedGraph() {
+   public MyGraph() {
        this.directed = false;
    }
 
-   public WeightedGraph(boolean directed) {
+   public MyGraph(boolean directed) {
        this.directed = directed;
    }
 
@@ -39,6 +39,22 @@ public class WeightedGraph<V> {
        if (!directed)
            map.get(destination).addAdjacentVertex(map.get(source), weight);
    }
+
+    public void addEdge(V source, V destination) {
+        if (!hasVertex(source))
+            addVertex(source);
+
+        if (!hasVertex(destination))
+            addVertex(destination);
+
+        if (hasEdge(source, destination) || source.equals(destination))
+            return;
+
+        map.get(source).addAdjacentVertex(map.get(destination), 0);
+
+        if (!directed)
+            map.get(destination).addAdjacentVertex(map.get(source), 0);
+    }
 
    private boolean hasVertex(V data) {
        return map.containsKey(data);
