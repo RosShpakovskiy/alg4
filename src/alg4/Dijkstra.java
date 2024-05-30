@@ -16,6 +16,8 @@ public class Dijkstra<V> extends Search<V> {
         dijkstra();
     }
 
+    //starts from an initial vertex and calculates
+    //distances to destination vertex.
     private void dijkstra() {
         distances.put(source, 0D);
         unsettledNodes.add(source);

@@ -7,6 +7,9 @@ public class DFS<V> extends Search<V> {
         dfs(graph, source);
     }
 
+    //starts from an initial vertex and goes down one path
+    //until it reaches the end and if it doesn't reach a destination,
+    //then it comes back and goes down a different path.
     private void dfs(MyGraph<V> graph, V current) {
         marked.add(current);
 

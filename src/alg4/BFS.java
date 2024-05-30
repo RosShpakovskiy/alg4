@@ -9,6 +9,8 @@ public class BFS<V> extends Search<V> {
         bfs(graph, source);
     }
 
+    //starts from an initial vertex and goes down on all paths
+    //until it reaches a destination
     private void bfs(MyGraph<V> graph, V current) {
         marked.add(current);
         Queue<V> queue = new LinkedList<>();

@@ -12,6 +12,7 @@ public class Vertex<V> {
         this.adjacentVertices = new HashMap<>();
     }
 
+    //puts info about edges (destination and weight)
     public void addAdjacentVertex(Vertex<V> destination, double weight) {
         adjacentVertices.put(destination, weight);
     }
