@@ -30,18 +30,16 @@ public class Main {
         Search<String> bfs = new BFS<>(weightedGraph, "Almaty");
         outputPath(bfs, "Kyzylorda");
 
-        /*
-        WeightedGraph<String> weightedGraph = new WeightedGraph<>(true);
-        fillWithWeights(weightedGraph);
-
         System.out.println("Dijkstra:");
-        Search<String> djk = new DijkstraSearch<>(weightedGraph, "Almaty");
+        Search<String> djk = new Dijkstra<>(weightedGraph, "Almaty");
         outputPath(djk, "Kyzylorda");
 
-
+        /*
         System.out.println("--------------------------------");
 
         WeightedGraph<String> graph = new WeightedGraph<>(true);
+
+
         fillWithoutWeights(graph);
 
         System.out.println("DFS:");
@@ -49,11 +47,6 @@ public class Main {
         outputPath(dfs, "Kyzylorda");
 
         System.out.println("--------------------------------");
-
-        System.out.println("BFS:");
-        Search<String> bfs = new BreadthFirstSearch<>(graph, "Almaty");
-        outputPath(bfs, "Kyzylorda");
-
          */
     }
 
