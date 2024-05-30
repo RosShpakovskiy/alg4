@@ -26,6 +26,10 @@ public class Main {
 
         System.out.println(weightedGraph.getEdges("Astana"));
 
+        System.out.println("BFS:");
+        Search<String> bfs = new BFS<>(weightedGraph, "Almaty");
+        outputPath(bfs, "Kyzylorda");
+
         /*
         WeightedGraph<String> weightedGraph = new WeightedGraph<>(true);
         fillWithWeights(weightedGraph);
@@ -74,7 +78,7 @@ public class Main {
         graph.addEdge("Astana", "Kostanay", 3.5);
         graph.addEdge("Shymkent", "Kyzylorda", 5.4);
     }
-    /*
+
 
     public static void outputPath(Search<String> search, String key) {
         for (String v : search.pathTo(key)) {
@@ -84,5 +88,4 @@ public class Main {
         System.out.println();
     }
 
-     */
 }

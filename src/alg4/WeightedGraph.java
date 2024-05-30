@@ -20,6 +20,10 @@ public class WeightedGraph<V> {
        map.put(data, new Vertex<>(data));
    }
 
+    public Vertex<V> getVertex(V data) {
+        return map.get(data);
+    }
+
    public void addEdge(V source, V destination, double weight) {
        if (!hasVertex(source))
            addVertex(source);
