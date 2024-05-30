@@ -2,16 +2,14 @@ package alg4;
 
 public class Main {
 
-    /*
-    According to the terms of the assignment,
-    the code must work with the unchanged Main class
-    from github. So I took it completely from there.
-    */
-
-    //At this stage of work I don't need to have full Main class
-    //from github. I'm checking the correctness of my code.
-
     public static void main(String[] args) {
+
+        /*
+        According to the terms of the assignment,
+        the code must work with the unchanged Main class
+        from github. So I took it completely from there.
+        */
+
         MyGraph<String> weightedGraph = new MyGraph<>(true);
         fillWithWeights(weightedGraph);
 
@@ -25,11 +23,9 @@ public class Main {
         MyGraph<String> graph = new MyGraph<>(true);
         fillWithoutWeights(graph);
 
-        /*
         System.out.println("DFS:");
         Search<String> dfs = new DFS<>(graph, "Almaty");
         outputPath(dfs, "Kyzylorda");
-         */
 
         System.out.println("--------------------------------");
 
